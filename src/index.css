@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+  transition-duration: 300ms;
+}
+
+.dark {
+  background-color: #0b1120; /* #08141D */
+  color: white;
+}
