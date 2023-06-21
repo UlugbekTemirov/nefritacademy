@@ -9,10 +9,6 @@
   transition-duration: 200ms;
 }
 
-body {
-  height: 10000px;
-}
-
 .dark {
   background-color: #0b1120; /* #08141D */
   color: white;
