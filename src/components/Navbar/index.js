@@ -98,11 +98,10 @@ const Navbar = () => {
   const routeName = location.pathname.split("/")[2];
 
   const checkPage = () => {
-    console.log(routeName);
     const route = routes.find(
       (route) => route.path.split("/")[1] === routeName
     );
-    setActive(route.id);
+    setActive(route?.id);
   };
 
   useEffect(() => {
@@ -112,8 +111,8 @@ const Navbar = () => {
   return (
     <div
       className={`${
-        top > 50 && "shadow-lg"
-      } bg-white dark:bg-gray-900 h-[80px] flex items-center fixed top-0 w-full`}
+        top > 50 && "shadow-lg bg-white"
+      }  dark:bg-gray-900 h-[80px] flex items-center fixed top-0 w-full z-[100]`}
     >
       <Container>
         <div className="flex justify-between items-center">
@@ -127,7 +126,7 @@ const Navbar = () => {
                   .filter((item) => item.id < active)
                   .reduce((acc, cur) => acc + cur.width, 0)}px)`,
               }}
-              className="absolute left-0 top-0 bg-gray-800/[0.8] duration-500 border h-full -z-[1] rounded-xl"
+              className="absolute left-0 top-0 dark:bg-gray-800/[0.8] duration-300 border-2 dark:border-white border-black h-full -z-[1] rounded-xl"
             ></span>
             <div ref={navRef}>
               {routes.map((route, index) => {
@@ -149,7 +148,7 @@ const Navbar = () => {
             <MenuBtn
               onClick={() => dispatch(setMobileSidebar(true))}
               size={40}
-              className="xl:hidden cursor-pointer"
+              className="xl:hidden cursor-pointer duration-200"
             />
           </div>
         </div>

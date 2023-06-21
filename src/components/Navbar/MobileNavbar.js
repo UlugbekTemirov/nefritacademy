@@ -14,7 +14,7 @@ const MobileNavbar = ({ routes }) => {
   return (
     <div
       onClick={() => dispatch(setMobileSidebar(false))}
-      className={`xl:hidden w-full absolute top-0 left-0 h-screen bg-transparent ${
+      className={`xl:hidden w-full absolute top-0 left-0 h-screen bg-transparent z-[101] ${
         mobileSidebar ? "translate-x-0" : "-translate-x-full"
       } transition-all duration-300 ease-in-out`}
     >
