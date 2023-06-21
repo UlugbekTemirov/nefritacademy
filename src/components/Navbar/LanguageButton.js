@@ -42,9 +42,12 @@ const LanguageButton = () => {
   return (
     <div>
       <select
+        style={{
+          WebkitAppearance: "none",
+        }}
         value={language}
         onChange={(e) => dispatch(setLanguage(e.target.value.toLowerCase()))}
-        className="p-2 rounded-md uppercase dark:bg-gray-800"
+        className="p-2 rounded-md uppercase bg-transparent hover:bg-black/[0.1] cursor-pointer border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
       >
         {langs.map(({ icon, value }, index) => (
           <option key={value} value={value}>

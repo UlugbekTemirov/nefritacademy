@@ -5,10 +5,9 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import Main from "./layout/Main";
 import LanguageRouter from "./utils/LanguageRouter";
+import Loader from "./components/Loader";
 
 // pages
 const Home = lazy(() => import("./pages/Home"));
@@ -43,7 +42,7 @@ function App() {
 
   return (
     <Router>
-      <Suspense fallback={"Loading"}>
+      <Suspense fallback={<Loader />}>
         <Main>
           <Routes>
             {routes.map((route, index) => (

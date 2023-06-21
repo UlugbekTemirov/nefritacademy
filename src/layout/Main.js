@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 const Main = ({ children }) => {
   return (
-    <div>
+    <div className="pt-[80px]">
       <Navbar />
       <div>{children}</div>
       <Footer />

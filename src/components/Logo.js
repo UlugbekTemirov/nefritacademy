@@ -1,10 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Logo = () => {
+  const { language } = useSelector((state) => state.navbar);
+
   return (
-    <div>
-      <h1 className="text-3xl">Logo</h1>
-    </div>
+    <Link to={language + "/"}>
+      <span className="icon icon-logo dark:bg-white bg-gray-900 md:w-[90px] md:h-[90px]"></span>
+    </Link>
   );
 };
 

@@ -1,7 +1,12 @@
 import React from "react";
+import Container from "../../layout/Container";
 
 const Index = () => {
-  return <div>Footer</div>;
+  return (
+    <div>
+      <Container>Footer</Container>
+    </div>
+  );
 };
 
 export default Index;

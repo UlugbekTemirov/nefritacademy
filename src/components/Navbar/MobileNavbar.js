@@ -14,11 +14,11 @@ const MobileNavbar = ({ routes }) => {
   return (
     <div
       onClick={() => dispatch(setMobileSidebar(false))}
-      className={`md:hidden w-full absolute top-0 left-0 h-screen bg-transparent ${
+      className={`xl:hidden w-full absolute top-0 left-0 h-screen bg-transparent ${
         mobileSidebar ? "translate-x-0" : "-translate-x-full"
       } transition-all duration-300 ease-in-out`}
     >
-      <div className="w-[80%] h-full dark:bg-gray-900 bg-white shadow-xl">
+      <div className="md:w-[50%] w-[80%] h-full dark:bg-gray-900 bg-white shadow-xl">
         <div className="flex flex-col">
           {routes.map(({ name, path }, index) => (
             <Link key={index} to={language + path}>
