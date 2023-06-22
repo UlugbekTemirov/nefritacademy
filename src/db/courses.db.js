@@ -2,14 +2,14 @@ const courses = [
   {
     id: 0,
     name: {
-      uz: "Frontend dasturlash",
-      ru: "Frontend разработка",
-      en: "Frontend development",
+      uz: "Bolalar uchun dasturlash",
+      ru: "Программирование для детей",
+      en: "Programming for kids",
     },
     description: {
-      uz: "Frontend dasturlash kurslarida o'qib malakasi mutaxasiska aylaning!",
-      ru: "В курсах по фронтенд разработке вы получите навыки профессионала!",
-      en: "In frontend development courses, you will become a professional!",
+      uz: "Bolalar uchun dasturlash kurslarida o'qib malakasi mutaxasisga aylaning!",
+      ru: "В курсах по программированию для детей вы получите навыки профессионала!",
+      en: "In programming courses for children, you will become a professional!",
     },
     modules: 5,
     duration: 6,
@@ -26,7 +26,7 @@ const courses = [
       en: "Frontend development",
     },
     description: {
-      uz: "Frontend dasturlash kurslarida o'qib malakasi mutaxasiska aylaning!",
+      uz: "Frontend dasturlash kurslarida o'qib malakasi mutaxasisga aylaning!",
       ru: "В курсах по фронтенд разработке вы получите навыки профессионала!",
       en: "In frontend development courses, you will become a professional!",
     },
@@ -45,7 +45,7 @@ const courses = [
       en: "Backend development",
     },
     description: {
-      uz: "Backend dasturlash kurslarida o'qib malakasi mutaxasiska aylaning!",
+      uz: "Backend dasturlash kurslarida o'qib malakasi mutaxasisga aylaning!",
       ru: "В курсах по backend разработке вы получите навыки профессионала!",
       en: "In backend development courses, you will become a professional!",
     },
@@ -64,7 +64,7 @@ const courses = [
       en: "Cyber security",
     },
     description: {
-      uz: "Kiberxavfsizlik kurslarida o'qib malakasi mutaxasiska aylaning!",
+      uz: "Kiberxavfsizlik kurslarida o'qib malakasi mutaxasisga aylaning!",
       ru: "В курсах по кибербезопасности вы получите навыки профессионала!",
       en: "In cyber security courses, you will become a professional!",
     },
@@ -83,7 +83,7 @@ const courses = [
       en: "Web design",
     },
     description: {
-      uz: "Web dizayn kurslarida o'qib malakasi mutaxasiska aylaning!",
+      uz: "Web dizayn kurslarida o'qib malakasi mutaxasisga aylaning!",
       ru: "В курсах по веб дизайну вы получите навыки профессионала!",
       en: "In web design courses, you will become a professional!",
     },
@@ -102,7 +102,7 @@ const courses = [
       en: "Robotics",
     },
     description: {
-      uz: "Robototexnika kurslarida o'qib malakasi mutaxasiska aylaning!",
+      uz: "Robototexnika kurslarida o'qib malakasi mutaxasisga aylaning!",
       ru: "В курсах по робототехнике вы получите навыки профессионала!",
       en: "In robotics courses, you will become a professional!",
     },
@@ -121,7 +121,7 @@ const courses = [
       en: "Foundation",
     },
     description: {
-      uz: "Foundation kurslarida o'qib malakasi mutaxasiska aylaning!",
+      uz: "Foundation kurslarida o'qib malakasi mutaxasisga aylaning!",
       ru: "В курсах по Foundation вы получите навыки профессионала!",
       en: "In Foundation courses, you will become a professional!",
     },
