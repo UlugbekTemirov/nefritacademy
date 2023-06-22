@@ -8,6 +8,7 @@ import {
 import Main from "./layout/Main";
 import LanguageRouter from "./utils/LanguageRouter";
 import Loader from "./components/Loader";
+import "react-toastify/dist/ReactToastify.css";
 
 // pages
 const Home = lazy(() => import("./pages/Home"));

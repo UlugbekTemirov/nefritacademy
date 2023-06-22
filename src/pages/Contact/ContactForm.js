@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Translate from "../../utils/Translate";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useRef } from "react";
 import { IMaskInput } from "react-imask";
+import { resetStatus, saveDocument } from "../../redux/contact.slice";
+import { toast } from "react-toastify";
 
 const ContactForm = () => {
   const { language } = useSelector((state) => state.navbar);
-  const formRef = useRef(null);
+  const { status, loading } = useSelector((state) => state.contact);
+  const formRef = useRef();
+  const dispatch = useDispatch();
 
   const placeholder = {
     name: {
@@ -21,35 +25,91 @@ const ContactForm = () => {
     },
   };
 
+  const translation = {
+    uz: "Muvaffaqiyatli yuborildi. Administrator qo'ng'irog'ini kuting",
+    ru: "Успешно отправлено. Подождите звонка администратора",
+    en: "Successfully sent. Wait for the administrator's call",
+  };
+
+  useEffect(() => {
+    console.log(status);
+    if (status === null) return;
+    if (status === "success") {
+      toast.success(translation[language], {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+      setTimeout(() => {
+        dispatch(resetStatus());
+        formRef.current.reset();
+      }, 2000);
+    }
+
+    //eslint-disable-next-line
+  }, [status]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    let json = {};
+    const formData = new FormData(formRef.current);
+    for (let [key, value] of formData.entries()) {
+      json[key] = value;
+    }
+
+    json.date = new Date().toLocaleString();
+
+    dispatch(saveDocument(json));
+  };
+
   return (
-    <form className="dark:bg-[#131C31] shadow-2xl bg-white border border-white/[0.3] p-10 rounded-lg max-w-[600px] mx-auto mt-10">
+    <form
+      ref={formRef}
+      onSubmit={handleSubmit}
+      className="dark:bg-[#131C31] shadow-2xl bg-white border border-white/[0.3] p-10 rounded-lg max-w-[600px] mx-auto mt-10"
+    >
       <input
+        required
+        name="studentName"
         className="p-5 border rounded-xl text-xl font-semibold w-full dark:bg-transparent bg-gray-100 dark:text-white dark:border-white/[0.3] dark:placeholder-white/[0.3]"
         type="text"
         placeholder={placeholder.name[language]}
       />
       <IMaskInput
+        required
+        name="phoneNumber"
         className="p-5 border rounded-xl text-xl font-semibold w-full mt-8 dark:bg-transparent bg-gray-100 dark:text-white dark:border-white/[0.3] dark:placeholder-white/[0.3]"
         mask={"+{998} (00) 000-00-00"}
         radix="."
-        value=""
         unmask={true} // true|false|'typed'
-        ref={formRef}
-        inputRef={formRef} // access to nested input
+        type="tel"
         onAccept={(value, mask) => console.log(value)}
         placeholder="Enter number here"
       />
       <button
-        className="w-full rounded-xl py-3 text-xl bg-blue-900 mt-8"
+        disabled={loading}
+        className={`w-full rounded-xl py-3 text-xl bg-blue-900 mt-8 ${
+          loading ? "bg-gray-500" : "bg-blue-900"
+        }`}
         type="submit"
       >
-        <Translate
-          dictionary={{
-            uz: "Yuborish",
-            ru: "Отправить",
-            en: "Send",
-          }}
-        />
+        {loading ? (
+          "Loading..."
+        ) : (
+          <Translate
+            dictionary={{
+              uz: "Yuborish",
+              ru: "Отправить",
+              en: "Send",
+            }}
+          />
+        )}
       </button>
     </form>
   );
