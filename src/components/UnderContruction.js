@@ -1,4 +1,5 @@
 import React from "react";
+import Translate from "../utils/Translate";
 
 const UnderContruction = () => {
   return (
@@ -9,8 +10,16 @@ const UnderContruction = () => {
       <div className="stars3" aria-hidden="true"></div>
       <main className="main">
         <section className="contact">
-          <h1 className="title">Awesome Thing</h1>
-          <h2 className="sub-title">Site Under Construction</h2>
+          <h1 className="title font-bold text-center">NEFRIT ACADEMY</h1>
+          <h2 className="sub-title">
+            <Translate
+              dictionary={{
+                uz: "Sahifa ishlab chiqilmoqda",
+                ru: "Страница в разработке",
+                en: "Page under construction",
+              }}
+            />
+          </h2>
         </section>
       </main>
     </div>
