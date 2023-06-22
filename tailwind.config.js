@@ -5,6 +5,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        fantacy:
+          "linear-gradient(90deg,#0ea5ea,#0bd1d1 51%,#0ea5ea) var(--x,0)/200%",
         light: {
           default: "",
         },

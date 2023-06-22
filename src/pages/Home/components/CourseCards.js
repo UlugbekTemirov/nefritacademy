@@ -17,7 +17,7 @@ const CourseCards = () => {
   const { language } = useSelector((state) => state.navbar);
 
   return (
-    <div className="w-full overflow-x-hidden">
+    <div className="w-full h-fit overflow-hidden">
       <Swiper
         effect={"cards"}
         grabCursor={true}

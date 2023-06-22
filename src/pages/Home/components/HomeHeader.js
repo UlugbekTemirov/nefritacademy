@@ -22,7 +22,7 @@ const HomeHeader = () => {
         <Container className="flex items-center h-full">
           <div className="grid md:grid-cols-2 grid-cols-1 md:gap-0 gap-10 items-center">
             <div className="col-span-1">
-              <h1 className="md:text-7xl text-3xl font-bold text-gray-900 dark:text-gray-100">
+              <h1 className="md:text-7xl text-3xl font-bold bg-gradient-to-r dark:from-sky-500 dark:to-indigo-500 from-green-950 to-green-700 text-transparent bg-clip-text">
                 <Translate
                   dictionary={{
                     uz: "Nefrit Academy - Zamonaviy kasblar maktabi",
