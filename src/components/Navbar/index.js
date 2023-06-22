@@ -148,7 +148,7 @@ const Navbar = () => {
             <MenuBtn
               onClick={() => dispatch(setMobileSidebar(true))}
               size={40}
-              className="xl:hidden cursor-pointer duration-200"
+              className="xl:hidden cursor-pointer duration-200 dark:text-white text-gray-900"
             />
           </div>
         </div>
