@@ -89,7 +89,6 @@ const ContactForm = () => {
         radix="."
         unmask={true} // true|false|'typed'
         type="tel"
-        onAccept={(value, mask) => console.log(value)}
         placeholder="Enter number here"
       />
       <button
