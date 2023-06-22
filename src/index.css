@@ -9,6 +9,10 @@
   transition-duration: 200ms;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .dark {
   background-color: #0b1120; /* #08141D */
   color: white;
