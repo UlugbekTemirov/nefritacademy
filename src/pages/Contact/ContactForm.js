@@ -72,19 +72,19 @@ const ContactForm = () => {
     <form
       ref={formRef}
       onSubmit={handleSubmit}
-      className="dark:bg-[#131C31] shadow-2xl bg-white border border-white/[0.3] p-10 rounded-lg max-w-[600px] mx-auto mt-10"
+      className="dark:bg-[#131C31] shadow-2xl bg-white border border-white/[0.3] md:p-10 p-5 rounded-lg max-w-[600px] mx-auto mt-10"
     >
       <input
         required
         name="studentName"
-        className="p-5 border rounded-xl text-xl font-semibold w-full dark:bg-transparent bg-gray-100 dark:text-white dark:border-white/[0.3] dark:placeholder-white/[0.3]"
+        className="md:p-5 p-3 border rounded-xl text-xl font-semibold w-full dark:bg-transparent bg-gray-100 dark:text-white dark:border-white/[0.3] dark:placeholder-white/[0.3]"
         type="text"
         placeholder={placeholder.name[language]}
       />
       <IMaskInput
         required
         name="phoneNumber"
-        className="p-5 border rounded-xl text-xl font-semibold w-full mt-8 dark:bg-transparent bg-gray-100 dark:text-white dark:border-white/[0.3] dark:placeholder-white/[0.3]"
+        className="md:p-5 p-3 border rounded-xl text-xl font-semibold w-full md:mt-8 mt-4 dark:bg-transparent bg-gray-100 dark:text-white dark:border-white/[0.3] dark:placeholder-white/[0.3]"
         mask={"+{998} (00) 000-00-00"}
         radix="."
         unmask={true} // true|false|'typed'
@@ -93,7 +93,7 @@ const ContactForm = () => {
       />
       <button
         disabled={loading}
-        className={`w-full rounded-xl py-3 text-xl bg-blue-900 mt-8 ${
+        className={`w-full rounded-xl py-3 text-xl bg-blue-900 md:mt-8 mt-4 ${
           loading ? "bg-gray-500" : "bg-blue-900"
         }`}
         type="submit"
