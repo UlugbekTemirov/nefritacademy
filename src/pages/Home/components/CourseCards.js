@@ -80,7 +80,7 @@ const CourseCards = () => {
                     </div>
                     <Link
                       className="bg-blue-600 px-10 py-2 md:text-xl text-sm rounded-xl text-center text-white"
-                      to={language + "/contact"}
+                      to={"/contact"}
                     >
                       <Translate
                         dictionary={{

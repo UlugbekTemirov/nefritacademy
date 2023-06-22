@@ -87,7 +87,7 @@ const ContactForm = () => {
         className="md:p-5 p-3 border rounded-xl text-xl font-semibold w-full md:mt-8 mt-4 dark:bg-transparent bg-gray-100 dark:text-white dark:border-white/[0.3] dark:placeholder-white/[0.3]"
         mask={"+{998} (00) 000-00-00"}
         radix="."
-        unmask={true} // true|false|'typed'
+        unmask={true}
         type="tel"
         placeholder="Enter number here"
       />
