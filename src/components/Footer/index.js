@@ -4,7 +4,7 @@ import Container from "../../layout/Container";
 const Index = () => {
   return (
     <div>
-      <Container>Footer</Container>
+      <Container></Container>
     </div>
   );
 };

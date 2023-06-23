@@ -89,11 +89,11 @@ const ContactForm = () => {
         radix="."
         unmask={true}
         type="tel"
-        placeholder="Enter number here"
+        placeholder={placeholder.phone[language]}
       />
       <button
         disabled={loading}
-        className={`w-full rounded-xl py-3 text-xl bg-blue-900 md:mt-8 mt-4 ${
+        className={`w-full rounded-xl text-white py-3 text-xl bg-blue-900 md:mt-8 mt-4 ${
           loading ? "bg-gray-500" : "bg-blue-900"
         }`}
         type="submit"
