@@ -27,7 +27,7 @@ const MobileNavbar = ({ routes }) => {
           <div className="flex flex-col items-center gap-5 mt-5">
             {routes.map(({ name, path }, index) => (
               <Link
-                className="py-2 px-4 bg-gray-100 w-full text-center rounded-xl text-lg"
+                className="py-2 px-4 bg-gray-100 dark:bg-gray-800 dark:border w-full text-center rounded-xl text-lg"
                 key={index}
                 to={language + path}
               >
